@@ -54,7 +54,7 @@ class Employee:
         if isinstance(self.contract, SalaryContract):
             contract_desc += f"monthly salary of {self.contract.salary}"
         elif isinstance(self.contract, HourlyContract):
-            contract_desc += f"contract of {self.hours_worked} hours at {self.contract.wage}/hour"
+            contract_desc += f"contract of {self.contract.hours_worked} hours at {self.contract.wage}/hour"
         if self.commission:
             if self.commission.commission_type == "bonus":
                 commission_desc = f" and receives a bonus commission of {self.commission.bonus}"
@@ -63,7 +63,7 @@ class Employee:
 
             contract_desc += commission_desc
         
-        return f"{contract_desc}. Their total pay is {self.get_pay()}"
+        return f"{contract_desc}. Their total pay is {self.get_pay()}."
         
 
 
